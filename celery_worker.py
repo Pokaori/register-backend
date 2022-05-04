@@ -15,8 +15,6 @@ CELERY_BROKER_URL = os.environ['CELERY_BROKER_URL']
 tasks = Celery('email_worker', broker=CELERY_BROKER_URL)
 
 PORT = 465   # For SSL
-LOGIN = "catmint436@gmail.com"
-PASSWORD ="16072002p"
 LOGIN = os.environ['EMAIL_LOGIN']
 PASSWORD = os.environ['EMAIL_PASSWORD']
 context = ssl.create_default_context()
